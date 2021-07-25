@@ -1,4 +1,4 @@
-package com.ssafy.coach5.dto;
+package com.ssafy.coach5.web.dto;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

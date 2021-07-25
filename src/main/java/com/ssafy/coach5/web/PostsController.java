@@ -1,5 +1,7 @@
-package com.ssafy.coach5.domain.posts;
+package com.ssafy.coach5.web;
 
+import com.ssafy.coach5.domain.posts.Posts;
+import com.ssafy.coach5.service.PostsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,5 +18,6 @@ public class PostsController {
 
     public void save(@RequestBody Posts posts){
         postsService.save(posts);
+        
     }
 }

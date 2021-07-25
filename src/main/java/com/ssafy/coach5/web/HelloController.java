@@ -1,6 +1,6 @@
-package com.ssafy.coach5.controller;
+package com.ssafy.coach5.web;
 
-import com.ssafy.coach5.dto.HelloResponseDto;
+import com.ssafy.coach5.web.dto.HelloResponseDto;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
