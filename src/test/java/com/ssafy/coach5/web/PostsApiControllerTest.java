@@ -2,6 +2,7 @@ package com.ssafy.coach5.web;
 
 import com.ssafy.coach5.domain.posts.Posts;
 import com.ssafy.coach5.domain.posts.PostsRepository;
+import com.ssafy.coach5.web.dto.PostsResponseDto;
 import com.ssafy.coach5.web.dto.PostsSaveRequestDto;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
@@ -55,5 +56,21 @@ class PostsApiControllerTest {
         List<Posts> all = postsRepository.findAll();
         assertThat(all.get(0).getTitle()).isEqualTo(title);
         assertThat(all.get(0).getContent()).isEqualTo(content);
+    }
+
+    @Test
+    public void Posts_조회() throws Exception {
+        //given
+        String title = "AWS로구현하기";
+        String content = "혼자 구현하는 웹 서비스";
+        String author = "이동욱";
+
+        //when
+        List<Posts> all = postsRepository.findAll();
+
+        //then
+        assertThat(all.get(0).getTitle()).isEqualTo(title);
+        assertThat(all.get(0).getContent()).isEqualTo(content);
+        assertThat(all.get(0).getAuthor()).isEqualTo(author);
     }
 }

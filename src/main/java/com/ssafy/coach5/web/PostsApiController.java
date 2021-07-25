@@ -1,11 +1,10 @@
 package com.ssafy.coach5.web;
 
 import com.ssafy.coach5.service.PostsService;
+import com.ssafy.coach5.web.dto.PostsResponseDto;
 import com.ssafy.coach5.web.dto.PostsSaveRequestDto;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -17,5 +16,10 @@ public class PostsApiController {
     public Long save(@RequestBody PostsSaveRequestDto requestDto){
         return postsService.save(requestDto);
         
+    }
+
+    @GetMapping("/api/v1/posts/{id}")
+    public PostsResponseDto findById (@PathVariable Long id){
+        return postsService.findById(id);
     }
 }
