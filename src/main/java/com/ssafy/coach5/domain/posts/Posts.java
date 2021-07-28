@@ -17,7 +17,6 @@ public class Posts {
 
     @Column(length = 500, nullable = false)
     private String title;
-
     @Column(columnDefinition = "TEXT", nullable = false)
     private String content;
 
